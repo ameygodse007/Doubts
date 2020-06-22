@@ -1,0 +1,7 @@
+from collections import OrderedDict
+dict=OrderedDict()
+for i in range(int(input())):
+    item,space,price=input().rpartition(' ')
+    dict[item]=dict.get(item,0) + int(price)
+for item,price in dict.items():
+    print(item,price)
